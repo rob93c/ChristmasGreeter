@@ -1,11 +1,15 @@
 package com.cellar.greeter;
 
-import org.apache.commons.lang3.reflect.FieldUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.mockito.DoNotMock;
+import org.mockito.Mockito;
+import org.mockito.exceptions.misusing.DoNotMockException;
+
+import com.cellar.greeter.constant.GreetMessage;
 
 @TestInstance(Lifecycle.PER_CLASS)
 public class GreeterTest {
@@ -18,9 +22,15 @@ public class GreeterTest {
 	}
 
 	@Test
-	public void greetingsTest() throws IllegalAccessException {
-		Object expectedGreetings = FieldUtils.readStaticField(Greeter.class, "GREETINGS", true);
-
-		Assertions.assertEquals(expectedGreetings, sut.getGreetings());
+	public void christmasGreetingsTest() throws IllegalAccessException {
+		Assertions.assertEquals(GreetMessage.CHRISTMAS.getMessage(), sut.getGreetings());
 	}
+
+	@Test
+	public void invalidMockTest() {
+		Assertions.assertThrows(DoNotMockException.class, () -> Mockito.mock(UnmockableClass.class));
+	}
+
+	@DoNotMock
+	private class UnmockableClass {}
 }

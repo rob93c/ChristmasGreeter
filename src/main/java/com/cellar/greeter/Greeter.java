@@ -1,5 +1,10 @@
 package com.cellar.greeter;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+import com.cellar.greeter.constant.GreetMessage;
+
 /**
  * Utility class providing methods aiming to wish you a merry Christmas.
  * 
@@ -7,14 +12,31 @@ package com.cellar.greeter;
  */
 public final class Greeter {
 
-	private static final String GREETINGS = "I wish you a merry Christmas!";
+	private static Greeter instance;
+	private static Lock lock = new ReentrantLock();
 
+	/**
+	 * Retrieves the single instance of the class {@link Greeter}.
+	 * 
+	 * @return instance
+	 */
 	public static Greeter getInstance() {
-		return new Greeter();
+		try {
+			if (instance == null) {
+				lock.lock();
+				if (instance == null) {
+					instance = new Greeter();
+				}
+			}
+		} finally {
+			lock.unlock();
+		}
+
+		return instance;
 	}
 
 	public String getGreetings() {
-		return GREETINGS;
+		return GreetMessage.CHRISTMAS.getMessage();
 	}
 
 	private Greeter() {}
