@@ -1,4 +1,7 @@
 # ChristmasGreeter
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b13b56ec86d044388c7b7ab84d458470)](https://app.codacy.com/gh/rob93c/ChristmasGreeter?utm_source=github.com&utm_medium=referral&utm_content=rob93c/ChristmasGreeter&utm_campaign=Badge_Grade_Settings)
+
 The ultimate tool to wish everyone a merry Christmas.
 
 ## Purpose
