@@ -18,3 +18,11 @@ The project itself is built with **Java 17** and it comes with the following dep
 * JUnit 5.8.2
 * Mockito 4.1.0
 * Log4j 2.14.1
+
+### License
+
+See the [**LICENSE**](https://github.com/rob93c/ChristmasGreeter/blob/master/LICENSE) file for license rights and limitations (MIT).
+
+<div align="right"><sup>
+  made with ❤️ by <a href="https://github.com/rob93c">@rob93c</a>
+</sup></div>
