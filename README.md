@@ -18,7 +18,17 @@ The project itself is built with **Java 17** and it comes with the following dep
 * `Mockito` 4.1.0
 * `Apache log4j` 2.14.1
 
-### License
+## How to set up the project
+
+1. Install Maven (**at least 3.8.x**) and JDK 17
+2. Clone the project locally and move into its folder
+3. Run the command `mvn install -DskipTests`
+4. Import the project inside your IDE as an existing Maven project
+5. Ensure your IDE is correctly configured to use a Java 17 JDK.
+
+*Note*: if your IDE is [Eclipse](https://www.eclipse.org/downloads/packages/installer), update it to the version 4.22 (2021-12) which added Java 17 support.
+
+## License
 
 See the [**LICENSE**](https://github.com/rob93c/ChristmasGreeter/blob/master/LICENSE) file for license rights and limitations (MIT).
 
