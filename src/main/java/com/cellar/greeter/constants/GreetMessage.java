@@ -1,4 +1,4 @@
-package com.cellar.greeter.constant;
+package com.cellar.greeter.constants;
 
 public enum GreetMessage {
 

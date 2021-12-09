@@ -9,7 +9,7 @@ import org.mockito.DoNotMock;
 import org.mockito.Mockito;
 import org.mockito.exceptions.misusing.DoNotMockException;
 
-import com.cellar.greeter.constant.GreetMessage;
+import com.cellar.greeter.constants.GreetMessage;
 
 @TestInstance(Lifecycle.PER_CLASS)
 public class GreeterTest {
@@ -22,7 +22,7 @@ public class GreeterTest {
 	}
 
 	@Test
-	public void christmasGreetingsTest() throws IllegalAccessException {
+	public void christmasGreetingsTest() {
 		Assertions.assertEquals(GreetMessage.CHRISTMAS.getMessage(), sut.getGreetings());
 	}
 

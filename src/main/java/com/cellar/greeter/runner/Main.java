@@ -1,4 +1,6 @@
-package com.cellar.greeter;
+package com.cellar.greeter.runner;
+
+import com.cellar.greeter.Greeter;
 
 public class Main {
 

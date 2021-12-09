@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.cellar.greeter.constant.GreetMessage;
+import com.cellar.greeter.constants.GreetMessage;
 
 /**
  * Utility class providing methods aiming to wish you a merry Christmas.
@@ -23,7 +23,8 @@ public final class Greeter {
 	/**
 	 * Retrieves the single instance of the class {@link Greeter}.
 	 * 
-	 * @return instance
+	 * @implSpec ensures thread safety using {@link ReentrantLock}
+	 * @return the instance of {@link Greeter}
 	 */
 	public static Greeter getInstance() {
 		if (instance == null) {
@@ -31,7 +32,7 @@ public final class Greeter {
 				lock.lock();
 				if (instance == null) {
 					instance = new Greeter();
-					LOGGER.debug("The instance has been initialized");
+					LOGGER.debug("The instance of " + Greeter.class + " has been initialized");
 				}
 			} finally {
 				lock.unlock();
