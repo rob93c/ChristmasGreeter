@@ -13,10 +13,10 @@ This project is meant as a playground to experiment with the _most recent_ Java 
 
 The project itself is built with **Java 17** and it comes with the following dependencies:
 
-* `Apache Commons` 3.12.0
-* `JUnit` 5.8.2
-* `Mockito` 4.1.0
-* `Apache log4j` 2.14.1
+* `Apache Commons 3`
+* `JUnit 5`
+* `Mockito 4`
+* `Apache log4j 2`
 
 ## How to set up the project
 
