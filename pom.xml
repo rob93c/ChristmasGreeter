@@ -20,7 +20,7 @@
 		<apache-commons-version>3.12.0</apache-commons-version>
 		<junit-version>5.8.2</junit-version>
 		<mockito-version>4.1.0</mockito-version>
-		<apache-log4j-version>2.15.0</apache-log4j-version>
+		<apache-log4j-version>2.16.0</apache-log4j-version>
 	</properties>
 
 	<dependencies>
