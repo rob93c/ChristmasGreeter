@@ -19,7 +19,7 @@
 		<maven.compiler.target>17</maven.compiler.target>
 		<apache-commons-version>3.12.0</apache-commons-version>
 		<junit-version>5.8.2</junit-version>
-		<mockito-version>4.1.0</mockito-version>
+		<mockito-version>4.2.0</mockito-version>
 		<apache-log4j-version>2.16.0</apache-log4j-version>
 	</properties>
 
@@ -50,8 +50,6 @@
 
 	<build>
 		<pluginManagement>
-			<!-- lock down plugins versions to avoid using Maven defaults (may be 
-				moved to parent pom) -->
 			<plugins>
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
@@ -65,7 +63,6 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.0.0</version>
 				</plugin>
-				<!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
 				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.0.2</version>
