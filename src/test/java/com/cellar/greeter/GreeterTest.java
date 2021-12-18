@@ -17,7 +17,7 @@ import org.mockito.exceptions.misusing.DoNotMockException;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.cellar.greeter.constants.GreetMessage;
-import com.cellar.greeter.utilities.StaticUtility;
+import com.cellar.greeter.utilities.StaticHelper;
 
 @ExtendWith(MockitoExtension.class)
 @TestInstance(Lifecycle.PER_CLASS)
@@ -26,7 +26,7 @@ public class GreeterTest {
 	private static final String FIRST_ELEMENT = "firstElement";
 
 	@Mock
-	private MockedStatic<StaticUtility> mockedUtility;
+	private MockedStatic<StaticHelper> mockedHelper;
 
 	private Greeter sut;
 
@@ -47,11 +47,11 @@ public class GreeterTest {
 
 	@Test
 	public void staticMockTest() {
-		mockedUtility.when(StaticUtility::getFirstElement).thenReturn(FIRST_ELEMENT);
-		mockedUtility.when(() -> StaticUtility.getArgsAsArray(FIRST_ELEMENT)).thenReturn(Collections.emptyList());
+		mockedHelper.when(StaticHelper::getFirstElement).thenReturn(FIRST_ELEMENT);
+		mockedHelper.when(() -> StaticHelper.getArgsAsArray(FIRST_ELEMENT)).thenReturn(Collections.emptyList());
 
-		Assertions.assertEquals(FIRST_ELEMENT, StaticUtility.getFirstElement());
-		List<String> argsList = StaticUtility.getArgsAsArray(FIRST_ELEMENT);
+		Assertions.assertEquals(FIRST_ELEMENT, StaticHelper.getFirstElement());
+		List<String> argsList = StaticHelper.getArgsAsArray(FIRST_ELEMENT);
 		Assertions.assertTrue(argsList.isEmpty());
 	}
 
