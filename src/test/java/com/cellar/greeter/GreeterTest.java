@@ -1,18 +1,32 @@
 package com.cellar.greeter;
 
+import java.util.Collections;
+import java.util.List;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.DoNotMock;
+import org.mockito.Mock;
+import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.exceptions.misusing.DoNotMockException;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.cellar.greeter.constants.GreetMessage;
+import com.cellar.greeter.utilities.StaticUtility;
 
+@ExtendWith(MockitoExtension.class)
 @TestInstance(Lifecycle.PER_CLASS)
 public class GreeterTest {
+
+	private static final String FIRST_ELEMENT = "firstElement";
+
+	@Mock
+	private MockedStatic<StaticUtility> mockedUtility;
 
 	private Greeter sut;
 
@@ -31,6 +45,17 @@ public class GreeterTest {
 		Assertions.assertThrows(DoNotMockException.class, () -> Mockito.mock(UnmockableClass.class));
 	}
 
+	@Test
+	public void staticMockTest() {
+		mockedUtility.when(StaticUtility::getFirstElement).thenReturn(FIRST_ELEMENT);
+		mockedUtility.when(() -> StaticUtility.getArgsAsArray(FIRST_ELEMENT)).thenReturn(Collections.emptyList());
+
+		Assertions.assertEquals(FIRST_ELEMENT, StaticUtility.getFirstElement());
+		List<String> argsList = StaticUtility.getArgsAsArray(FIRST_ELEMENT);
+		Assertions.assertTrue(argsList.isEmpty());
+	}
+
 	@DoNotMock
 	private class UnmockableClass {}
+
 }
