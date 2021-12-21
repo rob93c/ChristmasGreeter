@@ -48,10 +48,10 @@ public class GreeterTest {
 	@Test
 	public void staticMockTest() {
 		mockedHelper.when(StaticHelper::getFirstElement).thenReturn(FIRST_ELEMENT);
-		mockedHelper.when(() -> StaticHelper.getArgsAsArray(FIRST_ELEMENT)).thenReturn(Collections.emptyList());
+		mockedHelper.when(() -> StaticHelper.getArgsAsList(FIRST_ELEMENT)).thenReturn(Collections.emptyList());
 
 		Assertions.assertEquals(FIRST_ELEMENT, StaticHelper.getFirstElement());
-		List<String> argsList = StaticHelper.getArgsAsArray(FIRST_ELEMENT);
+		List<String> argsList = StaticHelper.getArgsAsList(FIRST_ELEMENT);
 		Assertions.assertTrue(argsList.isEmpty());
 	}
 
