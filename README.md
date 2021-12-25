@@ -4,7 +4,8 @@
 [![Maven build CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/maven.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/maven.yml) 
 [![Docker Image CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/docker-image.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/docker-image.yml) 
 [![Code Analysis CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml) 
-![GitHub top language](https://img.shields.io/github/languages/top/rob93c/ChristmasGreeter.svg) 
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/rob93c/christmas-greeter/latest) 
+![GitHub top language](https://img.shields.io/github/languages/top/rob93c/ChristmasGreeter.svg?color=orange) 
 [![GitHub](https://img.shields.io/github/license/rob93c/ChristmasGreeter.svg?color=%237d8183)](https://opensource.org/licenses/MIT) 
 [![Telegram](https://img.shields.io/badge/write%20me%20on-telegram-blue)](https://t.me/rob93c)
 
