@@ -15,7 +15,7 @@ RUN jlink --verbose \
     --no-header-files \
     --no-man-pages \
     --output target/jre \
-    --add-modules $(cat jre-deps.info)
+    --add-modules $(cat target/jre-deps.info)
 
 FROM gcr.io/distroless/base-debian11
 COPY --from=build-env /usr/src/app/target/greeter-0.0.1-SNAPSHOT-jar-with-dependencies.jar /app/greeter.jar
