@@ -19,6 +19,6 @@ RUN jlink --verbose \
 
 FROM gcr.io/distroless/base-debian11
 COPY --from=build-env /usr/src/app/target/greeter-0.0.1-SNAPSHOT-jar-with-dependencies.jar /app/greeter.jar
-COPY --from=build-env  /usr/src/app/target/jre /app/jre
+COPY --from=build-env /usr/src/app/target/jre /app/jre
 WORKDIR /app
 RUN ["jre/bin/java", "-jar", "greeter.jar"]
