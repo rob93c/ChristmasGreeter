@@ -79,6 +79,8 @@
 							<descriptorRefs>
 								<descriptorRef>jar-with-dependencies</descriptorRef>
 							</descriptorRefs>
+							<finalName>${project.name}</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
 							<archive>
 								<manifestEntries>
 									<Multi-Release>true</Multi-Release>
