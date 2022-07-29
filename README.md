@@ -1,10 +1,10 @@
 # ChristmasGreeter
 
+[![Java version](https://badgen.net/badge/Java/18/orange?icon=https://raw.githubusercontent.com/rob93c/ChristmasGreeter/add-java-version-badge/src/main/resources/java-logo.svg)](https://github.com/rob93c/ChristmasGreeter/search?l=java) 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/361904c6ec0d4a1490aa7d5593f8e26a)](https://www.codacy.com/gh/rob93c/ChristmasGreeter/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rob93c/ChristmasGreeter&amp;utm_campaign=Badge_Grade) 
 [![Maven build CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/maven.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/maven.yml) 
 [![Docker Image CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/docker-image.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/docker-image.yml) 
 [![Code Analysis CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml) 
-[![GitHub top language](https://img.shields.io/github/languages/top/rob93c/ChristmasGreeter.svg?color=orange)](https://github.com/rob93c/ChristmasGreeter/search?l=java) 
 [![Docker Image](https://badgen.net/badge/icon/docker?icon=docker&label)](https://hub.docker.com/r/rob93c/christmas-greeter) 
 [![Telegram](https://badgen.net/badge/icon/telegram?icon=telegram&label)](https://t.me/rob93c) 
 [![GitHub](https://img.shields.io/github/license/rob93c/ChristmasGreeter.svg?color=%237d8183)](https://opensource.org/licenses/MIT)
