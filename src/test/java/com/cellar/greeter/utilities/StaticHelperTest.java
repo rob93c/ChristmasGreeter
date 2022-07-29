@@ -1,6 +1,6 @@
 package com.cellar.greeter.utilities;
 
-import java.util.Arrays;
+import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -21,7 +21,7 @@ public class StaticHelperTest {
 	public void getArgsAsListTestWithValidInput() {
 		var result = StaticHelper.getArgsAsList(VALID_ELEMENT, INVALID_ELEMENT);
 		Assertions.assertEquals(VALID_ELEMENT, StaticHelper.getFirstElement());
-		var expectedList = Arrays.asList(VALID_ELEMENT, INVALID_ELEMENT);
+		var expectedList = List.of(VALID_ELEMENT, INVALID_ELEMENT);
 		Assertions.assertEquals(expectedList, result);
 	}
 
@@ -29,7 +29,7 @@ public class StaticHelperTest {
 	public void getArgsAsListTestWithInvalidInput() {
 		var result = StaticHelper.getArgsAsList(INVALID_ELEMENT);
 		Assertions.assertTrue(StaticHelper.getFirstElement().isEmpty());
-		var expectedList = Arrays.asList(INVALID_ELEMENT);
+		var expectedList = List.of(INVALID_ELEMENT);
 		Assertions.assertEquals(expectedList, result);
 	}
 }
