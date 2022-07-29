@@ -1,6 +1,5 @@
 package com.cellar.greeter.utilities;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -12,10 +11,10 @@ public class StaticHelper {
 
 	@SafeVarargs
 	public static <T> List<T> getArgsAsList(final T... args) {
-		List<T> argsList = Arrays.asList(args);
+		List<T> argsList = List.of(args);
 
 		firstElement = Stream.of(args)
-				.filter(e -> e instanceof String)
+				.filter(String.class::isInstance)
 				.findFirst()
 				.map(Object::toString)
 				.orElse(StringUtils.EMPTY);
@@ -26,4 +25,6 @@ public class StaticHelper {
 	public static String getFirstElement() {
 		return firstElement;
 	}
+
+	private StaticHelper() {}
 }
