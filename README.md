@@ -1,7 +1,7 @@
 # ChristmasGreeter
 
-[![Java version](https://badgen.net/badge/Java/18/orange?icon=https://raw.githubusercontent.com/rob93c/ChristmasGreeter/add-java-version-badge/src/main/resources/java-logo.svg)](https://github.com/rob93c/ChristmasGreeter/search?l=java) 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/361904c6ec0d4a1490aa7d5593f8e26a)](https://www.codacy.com/gh/rob93c/ChristmasGreeter/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rob93c/ChristmasGreeter&amp;utm_campaign=Badge_Grade) 
+[![Java version](https://badgen.net/badge/Java/Java%2018/orange?icon=https://raw.githubusercontent.com/rob93c/ChristmasGreeter/add-java-version-badge/src/main/resources/java-logo.svg&label)](https://github.com/rob93c/ChristmasGreeter/search?l=java) 
+[![Codacy Badge](https://badgen.net/codacy/grade/361904c6ec0d4a1490aa7d5593f8e26a)](https://www.codacy.com/gh/rob93c/ChristmasGreeter/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rob93c/ChristmasGreeter&amp;utm_campaign=Badge_Grade) 
 [![Maven build CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/maven.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/maven.yml) 
 [![Docker Image CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/docker-image.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/docker-image.yml) 
 [![Code Analysis CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml) 
