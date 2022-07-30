@@ -7,7 +7,7 @@
 [![Code Analysis CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml) 
 [![Docker Image](https://badgen.net/badge/icon/docker?icon=docker&label)](https://hub.docker.com/r/rob93c/christmas-greeter) 
 [![Telegram](https://badgen.net/badge/icon/telegram?icon=telegram&label)](https://t.me/rob93c) 
-[![License](https://badgen.net/badge/license/MIT/grey?icon=https://raw.githubusercontent.com/rob93c/BadgenIcons/master/icons/license-paper.svg&label)](https://opensource.org/licenses/MIT)
+[![License](https://badgen.net/badge/license/MIT/grey?icon=https://raw.githubusercontent.com/rob93c/BadgenIcons/master/icons/license-paper.svg&label)](https://github.com/rob93c/ChristmasGreeter/blob/master/LICENSE)
 
 The ultimate tool to wish everyone a merry Christmas.
 
