@@ -56,6 +56,6 @@ public class GreeterTest {
 	}
 
 	@DoNotMock
-	private class UnmockableClass {}
+	private static class UnmockableClass {}
 
 }

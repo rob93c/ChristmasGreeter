@@ -15,7 +15,7 @@ The ultimate tool to wish everyone a merry Christmas.
 
 This project is meant as a playground to experiment with the _most recent_ Java features.
 
-The project itself is built with **Java 18** and it comes with the following dependencies:
+The project itself is built with **Java 18**, and it comes with the following dependencies:
 
 * `Apache Commons 3`
 * `JUnit 5`
