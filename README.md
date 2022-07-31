@@ -1,13 +1,13 @@
 # ChristmasGreeter
 
-[![Java version](https://badgen.net/badge/Java/Java%2018/orange?icon=https://raw.githubusercontent.com/rob93c/BadgenIcons/master/icons/java-logo.svg&label)](https://github.com/rob93c/ChristmasGreeter/search?l=java) 
-[![Codacy Badge](https://badgen.net/codacy/grade/361904c6ec0d4a1490aa7d5593f8e26a?icon=https://raw.githubusercontent.com/rob93c/BadgenIcons/master/icons/codacy-logo.svg&label=Code%20quality)](https://www.codacy.com/gh/rob93c/ChristmasGreeter/dashboard) 
+[![Java version](https://badgen.net/badge/Java/Java%2018/orange?icon=https://raw.githubusercontent.com/rob93c/BadgenIcons/master/icons/java-logo.svg&labelColor=292f35&label)](https://github.com/rob93c/ChristmasGreeter/search?l=java) 
+[![Codacy Badge](https://badgen.net/codacy/grade/361904c6ec0d4a1490aa7d5593f8e26a?icon=https://raw.githubusercontent.com/rob93c/BadgenIcons/master/icons/codacy-logo.svg&labelColor=292f35&label=Code%20quality)](https://www.codacy.com/gh/rob93c/ChristmasGreeter/dashboard) 
 [![Maven build CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/maven.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/maven.yml) 
 [![Docker Image CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/docker-image.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/docker-image.yml) 
 [![Code Analysis CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml) 
-[![Docker Image](https://badgen.net/badge/docker/Docker?icon=docker&label)](https://hub.docker.com/r/rob93c/christmas-greeter) 
-[![Telegram](https://badgen.net/badge/telegram/Telegram?icon=telegram&label)](https://t.me/rob93c) 
-[![License](https://badgen.net/badge/license/MIT/black?icon=https://raw.githubusercontent.com/rob93c/BadgenIcons/master/icons/license-paper.svg&label)](https://github.com/rob93c/ChristmasGreeter/blob/master/LICENSE)
+[![Docker Image](https://badgen.net/badge/docker/Docker?icon=docker&labelColor=292f35&label)](https://hub.docker.com/r/rob93c/christmas-greeter) 
+[![Telegram](https://badgen.net/badge/telegram/Telegram?icon=telegram&labelColor=292f35&label)](https://t.me/rob93c) 
+[![License](https://badgen.net/badge/license/MIT/grey?icon=https://raw.githubusercontent.com/rob93c/BadgenIcons/master/icons/license-paper.svg&labelColor=292f35&label)](https://github.com/rob93c/ChristmasGreeter/blob/master/LICENSE)
 
 The ultimate tool to wish everyone a merry Christmas.
 
