@@ -114,6 +114,7 @@
 				<version>${jacoco.version}</version>
 				<configuration>
 					<excludes>
+						<excludes>com.cellar.greeter.runner.*</excludes>
 						<exclude>META-INF/**</exclude>
 					</excludes>
 				</configuration>
@@ -130,7 +131,6 @@
 							<goal>report</goal>
 						</goals>
 						<configuration>
-							<excludes>com.cellar.greeter.runner.*</excludes>
 							<outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
 							<formats>XML</formats>
 						</configuration>
