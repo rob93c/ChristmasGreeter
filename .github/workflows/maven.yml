@@ -12,21 +12,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 18
-      uses: actions/setup-java@v3
-      with:
-        java-version: '18'
-        distribution: 'adopt'
-        cache: maven
-    - name: Build project with Maven
-      run: mvn -B package --file pom.xml
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        directory: ./target/site/jacoco/
-        fail_ci_if_error: true
-        flags: unit_tests
-        name: codecov-umbrella
-        verbose: true
+      - uses: actions/checkout@v3
+      - name: Set up JDK 18
+        uses: actions/setup-java@v3
+        with:
+          java-version: '18'
+          distribution: 'adopt'
+          cache: maven
+      - name: Build project with Maven
+        run: mvn -B package --file pom.xml
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./target/site/jacoco/
+          fail_ci_if_error: true
+          flags: unit_tests
+          name: codecov-umbrella
+          verbose: true
