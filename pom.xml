@@ -114,7 +114,7 @@
 				<version>${jacoco.version}</version>
 				<configuration>
 					<excludes>
-						<excludes>com.cellar.greeter.runner.*</excludes>
+						<exclude>com.cellar.greeter.runner.Main</exclude>
 						<exclude>META-INF/**</exclude>
 					</excludes>
 				</configuration>
