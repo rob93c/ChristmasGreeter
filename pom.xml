@@ -114,7 +114,7 @@
 				<version>${jacoco.version}</version>
 				<configuration>
 					<outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
-					<formats>XML,HTML</formats>
+					<formats>XML</formats>
 					<excludes>
 						<exclude>com/cellar/greeter/runner/Main.class</exclude>
 						<exclude>META-INF/**</exclude>
