@@ -113,8 +113,10 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${jacoco.version}</version>
 				<configuration>
+					<outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
+					<formats>XML,HTML</formats>
 					<excludes>
-						<exclude>com.cellar.greeter.runner.Main</exclude>
+						<exclude>com/cellar/greeter/runner/Main.class</exclude>
 						<exclude>META-INF/**</exclude>
 					</excludes>
 				</configuration>
@@ -130,10 +132,6 @@
 						<goals>
 							<goal>report</goal>
 						</goals>
-						<configuration>
-							<outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
-							<formats>XML</formats>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>

@@ -27,6 +27,6 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         directory: ./target/site/jacoco/
         fail_ci_if_error: true
-        flags: unittests
+        flags: unit_tests
         name: codecov-umbrella
         verbose: true
