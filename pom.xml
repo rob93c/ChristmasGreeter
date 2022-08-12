@@ -10,7 +10,7 @@
 
 	<name>Greeter</name>
 	<description>A simple Christmas greeter.</description>
-	<url>http://www.github.com/rob93c</url>
+	<url>https://www.github.com/rob93c</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
