@@ -8,7 +8,7 @@
 [![Code Analysis CI](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/rob93c/ChristmasGreeter/actions/workflows/codeql-analysis.yml)
 [![Docker Image](https://badgen.net/badge/docker/Docker?icon=docker&labelColor=292f35&label)](https://hub.docker.com/r/rob93c/christmas-greeter)
 [![Telegram](https://badgen.net/badge/telegram/Telegram?icon=telegram&labelColor=292f35&label)](https://t.me/rob93c)
-[![License](https://badgen.net/badge/license/MIT/grey?icon=https://raw.githubusercontent.com/rob93c/BadgenIcons/master/icons/license-paper.svg&labelColor=292f35&label)](https://github.com/rob93c/ChristmasGreeter/blob/master/LICENSE)
+[![License](https://badgen.net/badge/license/MIT/grey?icon=https://raw.githubusercontent.com/rob93c/BadgenIcons/master/icons/license-paper.svg&labelColor=292f35&label)](LICENSE)
 
 The ultimate tool to wish everyone a merry Christmas.
 
@@ -31,11 +31,15 @@ The project itself is built with **Java 18**, and it comes with the following de
 4. Import the project inside your IDE as a Maven project
 5. Ensure your IDE is correctly configured to use a Java 18 JDK.
 
-*Note*: if your IDE is [Eclipse](https://www.eclipse.org/downloads/packages/installer), update it to the version 4.24 (2022-06) which added Java 18 support.
+*Note*: if your IDE is [Eclipse](https://www.eclipse.org/downloads/packages/installer), use **at least** the version 4.24 (2022-06) which added Java 18 support.
+
+## How to contribute to the project
+
+Take a look at this project's contributing guidelines [here](CONTRIBUTING.md).
 
 ## License
 
-See the [**LICENSE**](https://github.com/rob93c/ChristmasGreeter/blob/master/LICENSE) file for license rights and limitations (MIT).
+See the [**LICENSE**](LICENSE) file for license rights and limitations (MIT).
 
 <div align="right">
 <sup>made with ❤️ by <a href="https://github.com/rob93c">@rob93c</a></sup>
