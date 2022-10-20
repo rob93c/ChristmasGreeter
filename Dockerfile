@@ -1,5 +1,9 @@
-FROM maven:3.8-openjdk-18-slim
-COPY src /usr/src/app/src  
-COPY pom.xml /usr/src/app  
-RUN mvn -f /usr/src/app/pom.xml clean package && \
-	java -jar /usr/src/app/target/Greeter.jar
+FROM gradle:7.5.1-jdk18 AS builder
+COPY . /app
+WORKDIR /app
+RUN gradle shadowJar --no-daemon
+
+FROM eclipse-temurin:18
+COPY --from=builder /app/build/libs /app
+WORKDIR /app
+RUN ["java", "-jar", "Greeter-shadow.jar"]
