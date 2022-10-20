@@ -20,7 +20,7 @@ jobs:
           distribution: 'adopt'
           cache: gradle
       - name: Build project with Gradle
-        run: ./gradlew build
+        run: chmod +x gradlew && ./gradlew build --no-daemon
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
