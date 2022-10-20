@@ -1,0 +1,14 @@
+[versions]
+jacoco = "0.8.8"
+mockito = "4.8.1"
+
+[libraries]
+commons-lang3 = "org.apache.commons:commons-lang3:3.12.0"
+junit = "org.junit.jupiter:junit-jupiter-api:5.9.1"
+log4j = "org.apache.logging.log4j:log4j-core:2.19.0"
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito" }
+
+[plugins]
+shadow = "com.github.johnrengelman.shadow:7.1.2"

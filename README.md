@@ -25,10 +25,10 @@ The project itself is built with **Java 18**, and it comes with the following de
 
 ## How to set up the project
 
-1. Install Maven (**at least 3.8.x**) and JDK 18
+1. Install JDK 18
 2. Clone the project locally and move into its folder
-3. Run the command `mvn install -DskipTests`
-4. Import the project inside your IDE as a Maven project
+3. Run the command `./gradlew build`
+4. Import the project inside your IDE as a Gradle project
 5. Ensure your IDE is correctly configured to use a Java 18 JDK.
 
 *Note*: if your IDE is [Eclipse](https://www.eclipse.org/downloads/packages/installer), use **at least** the version 4.24 (2022-06) which added Java 18 support.

@@ -1,4 +1,4 @@
-name: Maven build CI
+name: Gradle build CI
 
 on:
   push:
@@ -18,14 +18,14 @@ jobs:
         with:
           java-version: '18'
           distribution: 'adopt'
-          cache: maven
+          cache: gradle
       - name: Build project with Maven
-        run: mvn -B package --file pom.xml
+        run: ./gradlew build
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./target/site/jacoco/
+          directory: ./build/reports/jacoco/test/
           fail_ci_if_error: true
           flags: unit_tests
           name: codecov-umbrella

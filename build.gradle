@@ -1,0 +1,47 @@
+plugins {
+    alias(libs.plugins.shadow)
+    id 'application'
+    id 'java'
+    id 'jacoco'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.commons.lang3
+    implementation libs.log4j
+    testImplementation libs.junit
+    testImplementation libs.mockito.core
+    testImplementation libs.mockito.junit
+    testImplementation libs.mockito.inline
+}
+
+group = 'com.cellar'
+version = '0.0.1-SNAPSHOT'
+description = 'A simple Christmas greeter'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(18)
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainClass = 'com.cellar.greeter.runner.Main'
+}
+
+shadowJar {
+    archiveBaseName.set('Greeter')
+    archiveClassifier.set('shadow')
+    archiveVersion.set('')
+}
+
+jacoco {
+    toolVersion = libs.versions.jacoco.get()
+}
