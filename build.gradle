@@ -42,6 +42,15 @@ jacocoTestReport {
     reports {
         xml.required = true
     }
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                "com/cellar/greeter/runner/Main.class",
+                "META-INF/**"
+            ])
+        }))
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
