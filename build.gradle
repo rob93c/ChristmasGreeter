@@ -12,7 +12,8 @@ repositories {
 dependencies {
     implementation libs.commons.lang3
     implementation libs.log4j
-    testImplementation libs.junit
+    testImplementation libs.junit.api
+    testImplementation libs.junit.engine
     testImplementation libs.mockito.core
     testImplementation libs.mockito.junit
     testImplementation libs.mockito.inline
@@ -28,7 +29,22 @@ java {
     }
 }
 
-tasks.withType(JavaCompile) {
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+}
+
+jacoco {
+    toolVersion = libs.versions.jacoco.get()
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
@@ -40,8 +56,7 @@ shadowJar {
     archiveBaseName.set('Greeter')
     archiveClassifier.set('shadow')
     archiveVersion.set('')
-}
-
-jacoco {
-    toolVersion = libs.versions.jacoco.get()
+    manifest {
+        attributes('Multi-Release': true)
+    }
 }

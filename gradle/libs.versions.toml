@@ -1,10 +1,12 @@
 [versions]
 jacoco = "0.8.8"
+junit = "5.9.1"
 mockito = "4.8.1"
 
 [libraries]
 commons-lang3 = "org.apache.commons:commons-lang3:3.12.0"
-junit = "org.junit.jupiter:junit-jupiter-api:5.9.1"
+junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
 log4j = "org.apache.logging.log4j:log4j-core:2.19.0"
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
