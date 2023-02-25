@@ -13,4 +13,4 @@ mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "m
 mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito" }
 
 [plugins]
-shadow = "com.github.johnrengelman.shadow:7.1.2"
+shadow = "com.github.johnrengelman.shadow:8.0.0"
