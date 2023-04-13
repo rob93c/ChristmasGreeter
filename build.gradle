@@ -14,9 +14,7 @@ dependencies {
     implementation libs.log4j
     testImplementation libs.junit.api
     testImplementation libs.junit.engine
-    testImplementation libs.mockito.core
-    testImplementation libs.mockito.junit
-    testImplementation libs.mockito.inline
+    testImplementation libs.mockito
 }
 
 group = 'com.cellar'

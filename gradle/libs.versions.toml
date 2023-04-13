@@ -1,16 +1,13 @@
 [versions]
 jacoco = "0.8.8"
 junit = "5.9.2"
-mockito = "5.3.0"
 
 [libraries]
 commons-lang3 = "org.apache.commons:commons-lang3:3.12.0"
 junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
 junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
 log4j = "org.apache.logging.log4j:log4j-core:2.20.0"
-mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
-mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
-mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito" }
+mockito = "org.mockito:mockito-junit-jupiter:5.3.0"
 
 [plugins]
 shadow = "com.github.johnrengelman.shadow:8.1.1"
