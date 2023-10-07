@@ -38,8 +38,10 @@ jobs:
       - name: Set Docker tags
         id: docker-tags
         run: |
+          IFS=$'\n' read -ra tags <<< "${{ steps.metadata.outputs.tags }}"
+          
           cleaned_tags=()
-          for tag in ${{ steps.metadata.outputs.tags }}; do
+          for tag in "${tags[@]}"; do
             if [[ "$tag" != *master* ]]; then
               cleaned_tags+=("$tag")
             fi
