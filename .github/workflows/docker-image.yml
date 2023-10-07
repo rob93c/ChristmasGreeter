@@ -39,7 +39,7 @@ jobs:
         id: docker-tags
         run: |
           cleaned_tags=()
-          for tag in "${{ steps.metadata.outputs.tags }}"; do
+          for tag in ${{ steps.metadata.outputs.tags }}; do
             if [[ "$tag" != *master* ]]; then
               cleaned_tags+=("$tag")
             fi
