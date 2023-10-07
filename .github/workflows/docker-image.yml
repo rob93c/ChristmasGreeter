@@ -40,7 +40,7 @@ jobs:
         run: |
           cleaned_tags=" ${{ steps.metadata.outputs.tags }} "
           if [[ " ${{ steps.metadata.outputs.tags }} " =~ "christmas-greeter:latest" ]]; then
-            cleaned_tags=("latest")
+            cleaned_tags=("***/christmas-greeter:latest")
           fi
           echo "cleaned_tags=${cleaned_tags}" >> "$GITHUB_OUTPUT"
 
