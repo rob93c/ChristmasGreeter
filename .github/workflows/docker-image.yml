@@ -38,9 +38,9 @@ jobs:
       - name: Set Docker tags
         id: docker-tags
         run: |
-          cleaned_tags=${{ steps.metadata.outputs.tags }}
+          cleaned_tags=" ${{ steps.metadata.outputs.tags }} "
           if [[ " ${{ steps.metadata.outputs.tags }} " =~ "christmas-greeter:latest" ]]; then
-            cleaned_tags=("***/christmas-greeter:latest")
+            cleaned_tags=("latest")
           fi
           echo "cleaned_tags=${cleaned_tags}" >> "$GITHUB_OUTPUT"
 
