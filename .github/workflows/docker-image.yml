@@ -35,32 +35,11 @@ jobs:
             type=ref,event=branch
             type=ref,event=pr
 
-      - name: Set Docker tags
-        id: docker-tags
-        run: |
-          IFS=$'\n' read -ra tags <<< "${{ steps.metadata.outputs.tags }}"
-          
-          cleaned_tags=()
-          for tag in "${tags[@]}"; do
-            if [[ "$tag" != *master* ]]; then
-              cleaned_tags+=("$tag")
-            fi
-          done
-
-          echo "cleaned_tags=${cleaned_tags}" >> "$GITHUB_OUTPUT"
-
       - name: Upload Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ${{ steps.docker-tags.outputs.cleaned_tags }}
+          tags: ${{ steps.metadata.outputs.tags }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-
-      - name: Delete Docker tag
-        if: github.event.pull_request.merged
-        run: |
-          tag_to_delete="pr-${{github.event.issue.number}}"
-          docker rmi rob93c/christmas-greeter:$tag_to_delete
-          echo "The tag $tag_to_delete has been deleted"
