@@ -53,5 +53,7 @@ jobs:
         if: github.event.pull_request.merged
         run: |
           tag_to_delete="pr-${{ github.event.pull_request.number }}"
-          docker rmi rob93c/christmas-greeter:$tag_to_delete
+          docker pull rob93c/christmas-greeter:$tag_to_delete
+          docker tag rob93c/christmas-greeter:$tag_to_delete rob93c/christmas-greeter:latest
+          docker push rob93c/christmas-greeter:latest
           echo "The tag $tag_to_delete has been deleted"
