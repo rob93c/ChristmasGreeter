@@ -3,6 +3,10 @@ name: Docker Image CI
 on:
   workflow_dispatch:
   pull_request:
+    types:
+      - opened
+      - reopened
+      - closed
   push:
     branches:
       - master
@@ -32,7 +36,7 @@ jobs:
             rob93c/christmas-greeter
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
-            type=ref,event=branch,enable=${{ github.ref != 'refs/heads/master' }}
+            type=ref,event=branch,enable=${{ endsWith(github.ref, 'master') }}
             type=ref,event=pr
 
       - name: Upload Docker image
