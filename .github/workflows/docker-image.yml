@@ -37,8 +37,14 @@ jobs:
             rob93c/christmas-greeter
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
-            type=ref,event=branch,enable=${{ github.ref != github.event.repository.default_branch }}
+            type=ref,event=branch,enable=${{ github.ref != 'refs/heads/master' }}
             type=ref,event=pr
+
+      - name: Print context info
+        run: |
+          echo "Issue number: ${{ github.event.issue.number }}"
+          echo "Event number: ${{ github.event.number }}"
+          echo "Pull request number: ${{ github.event.pull_request.number }}"
 
       - name: Upload Docker image
         uses: docker/build-push-action@v5
@@ -52,6 +58,6 @@ jobs:
       - name: Delete Docker tag
         if: github.event.pull_request.merged
         run: |
-          tag_to_delete="pr-${{github.event.issue.number}}"
+          tag_to_delete="pr-${{ github.event.pull_request.number }}"
           docker rmi rob93c/christmas-greeter:$tag_to_delete
           echo "The tag $tag_to_delete has been deleted"
