@@ -32,7 +32,7 @@ jobs:
             rob93c/christmas-greeter
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
-            type=ref,event=branch
+            type=ref,event=branch,enable=${{ github.ref != 'refs/heads/main' }}
             type=ref,event=pr
 
       - name: Upload Docker image
@@ -43,3 +43,10 @@ jobs:
           tags: ${{ steps.metadata.outputs.tags }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      - name: Delete Docker tag
+        if: github.event.pull_request.merged
+        run: |
+          tag_to_delete="pr-${{github.event.issue.number}}"
+          docker rmi rob93c/christmas-greeter:$tag_to_delete
+          echo "The tag $tag_to_delete has been deleted"
