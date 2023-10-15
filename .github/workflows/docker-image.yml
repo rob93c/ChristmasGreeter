@@ -40,12 +40,6 @@ jobs:
             type=ref,event=branch,enable=${{ github.ref != 'refs/heads/master' }}
             type=ref,event=pr
 
-      - name: Print context info
-        run: |
-          echo "Issue number: ${{ github.event.issue.number }}"
-          echo "Event number: ${{ github.event.number }}"
-          echo "Pull request number: ${{ github.event.pull_request.number }}"
-
       - name: Upload Docker image
         uses: docker/build-push-action@v5
         with:
