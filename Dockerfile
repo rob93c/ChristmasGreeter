@@ -3,7 +3,7 @@ COPY . /app
 WORKDIR /app
 RUN gradle shadowJar --no-daemon
 
-FROM eclipse-temurin:21
+FROM eclipse-temurin:25
 COPY --from=builder /app/build/libs /app
 WORKDIR /app
 RUN ["java", "-jar", "Greeter-shadow.jar"]
