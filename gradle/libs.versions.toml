@@ -1,5 +1,5 @@
 [versions]
-jacoco = "0.8.8"
+jacoco = "0.8.15"
 junit = "5.11.4"
 
 [libraries]
